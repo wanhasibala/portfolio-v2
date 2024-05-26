@@ -15,7 +15,6 @@ export default function Menu({
   toggleHamburger: any;
   isActive: boolean;
 }) {
- 
   return (
     <div
       onClick={toggleHamburger}
@@ -27,55 +26,18 @@ export default function Menu({
       <div className="text-xl border-b pb-2">Navigation</div>
       <div className="flex flex-col  gap-5">
         <MagneticEffect>
-          <Link
-            // to="hero"
-            // spy={true}
-            // smooth={true}
-            // offset={50}
-            // duration={500}
-            // className="cursor-pointer"
-            href="/"
-          >
-            Home
-          </Link>
+          <Link href="/">Home</Link>
         </MagneticEffect>
         <MagneticEffect>
-          <Link
-            // to="gallery"
-            // spy={true}
-            // smooth={true}
-            // duration={500}
-            // className="cursor-pointer"
-            href="/gallery"
-          >
+          <Link className="cursor-pointer" href="/gallery">
             Gallery
           </Link>
         </MagneticEffect>
         <MagneticEffect>
-          <Link
-            // to="work"
-            // spy={true}
-            // smooth={true}
-            // offset={50}
-            // duration={500}
-            // className="cursor-pointer"
-            href="/projects"
-          >
-            Project
-          </Link>
+          <Link href="/project">Project</Link>
         </MagneticEffect>
         <MagneticEffect>
-          <Link
-            // to="contact"
-            // spy={true}
-            // smooth={true}
-            // offset={50}
-            // duration={500}
-            // className="cursor-pointer"
-            href="/contact"
-          >
-            Contact
-          </Link>
+          <Link href="/contact">Contact</Link>
         </MagneticEffect>
       </div>
       <div>
@@ -87,8 +49,8 @@ export default function Menu({
           <a href="">Email</a>
         </div>
       </div>
-      <div className="flex bg-[#282828] w-fit px-4 py-2 rounded-md gap-5">
-     <ThemeSwitcher />
+      <div className="flex dark:bg-[#282828] bg-[#dcdcdc]  w-fit px-4 py-2 rounded-md gap-5">
+        <ThemeSwitcher />
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed z-[999] w-full flex  justify-between px-6 md:px-12 lg:px-20 mt-[30px] items-center  text-secondary-100 transition-all duration-300 delay-300",
+        "fixed z-[999] w-full flex  justify-between px-6 md:px-12 lg:px-20 mt-[30px] items-center  text-secondary-100 transition-all duration-300 delay-300 ",
         { "w-full px-6 md:px-12 lg:px-20": !header }
       )}
     >
@@ -52,20 +52,21 @@ export default function Navbar() {
         <MagneticEffect>
           <Link href="#gallery" className="flex flex-col group gap-5">
             Gallery
-            <div className="w-2 h-2 bg-black rounded-full  hidden group-hover:block self-center"/>
+            <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center"/>
             </Link>
         </MagneticEffect>
         <MagneticEffect>
-          <Link href="#work" className="flex flex-col group gap-5">Work
-            <div className="w-2 h-2 bg-black rounded-full  hidden group-hover:block self-center"/>
+          <Link href="/project" className="flex flex-col group gap-5">Work
+            <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center"/>
           </Link>
         </MagneticEffect>
         <MagneticEffect>
           <Link href="#contact" className="flex flex-col group gap-5">Contact
-            <div className="w-2 h-2 bg-black rounded-full  hidden group-hover:block self-center"/>
+            <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center"/>
           </Link>
         </MagneticEffect>
       </div>
+
       <Button
         toggleHamburger={toggleHamburger}
         isActive={!isActive}

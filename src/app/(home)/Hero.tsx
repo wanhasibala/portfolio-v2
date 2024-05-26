@@ -62,7 +62,7 @@ const Hero = () => {
       <div className=" mt-[160px] z-2  h-[60vh] flex flex-col justify-between w-full ">
         {/* Hero text */}
         <div className="flex flex-col dark:bg-[#171717] dark:bg-opacity-30 bg-[#f8f8f8] bg-opacity-30 p-2.5 rounded-[20px] backdrop-blur-xl">
-            <h1 className="text-title font-bold md:max-w-[600px] lg:max-w-[800px] ">Hi, Im Wan Hasib</h1>
+            <h1 className="text-title font-bold lg:max-w-[800px] ">Hi, Im Wan Hasib</h1>
             <p className="text-xl lg: max-w-[650px]">Creative web designer & tech enthusiast</p>
         </div>
             <p className="text-xl mt-10 z-10 md:max-w-[600px]">Empowering online entrepreneurs to craft standout products with innovative design and strategic development. Let's create something remarkable together.</p>
