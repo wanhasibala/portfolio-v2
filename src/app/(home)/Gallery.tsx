@@ -1,6 +1,8 @@
-"use client"
+"use client";
+import Photo from "@/components/ui/Photo";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Image from "next/image";
 import { useEffect } from "react";
 import SplitType from "split-type";
 // import Photo from "./ui/photo";
@@ -110,34 +112,20 @@ export default function Gallery() {
         </div>
       </div>
 
-      <div className="  mb-20 lg:h-[70vh] pt-[30vh] max-w-[1440px] mx-auto  px-4 md:px-12 text-heading-3 font-medium text-center my-10 text-secondary-800 trigger ">
+      <div className="  mb-20 lg:h-[70vh] pt-[30vh] max-w-[1440px] mx-auto  px-4 md:px-12 text-heading-3  text-center my-10 text-secondary-800 trigger ">
         <div className="split ">
           I am a Product Design with a keen eye for aesthetics and a commitment
           to crafting digital experiences that not only meet but exceed user
           expectations.
         </div>
       </div>
-
-      {/* <div className="my-10 gap-5 ">
-        <div className=" inline-flex mb-5 gap-5 ml-[100px] photos">
-          <Photo src="render 3.webp" alt="1" />
-          <Photo src="astronout machine.webp" alt="1" />
-          <Photo src="abstract animation.webp" alt="1" />
-          <Photo src="Intersect.webp" alt="1" />
-          <Photo src="jadi.webp" alt="1" />
-          <Photo src="stylized alien landscape 2.webp" alt="1" />
-          <Photo src="Ads Video.webp" alt="1" />
-        </div>
-
-        <div className=" inline-flex gap-5  -ml-[800px] photos-2">
-          <Photo src="self harm.webp" alt="1" />
-          <Photo src="p.webp" alt="1" />
-          <Photo src="MacBook-_01.webp" alt="1" />
-          <Photo src="EduCredit.webp" alt="1" />
-          <Photo src="render 3.webp" alt="1" />
-          <Photo src="untitled.webp" alt="1" />
-          <Photo src="Intersect.webp" alt="1" />
-        </div>
+      {/* <div>
+        <Image
+          src="/p.webp"
+          alt="1"
+          fill
+          sizes="(max-widht:768px) 100vw, (max-widht:1200px) 50vw, 33vw"
+        />
       </div> */}
     </>
   );
