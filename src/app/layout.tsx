@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Livvic } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/component/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 
 const inter = Livvic({ weight: ["400", '500', '600','700'], subsets: ["latin", "latin-ext", "vietnamese"]});
 

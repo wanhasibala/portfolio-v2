@@ -47,8 +47,8 @@ export default function MagneticEffect({ children }: MagneticEffectProps) {
   const { x, y } = position
 
   return (
-    <motion.div
-      ref={ref}
+    <motion.div 
+    ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
       animate={{ x, y }}
@@ -57,10 +57,8 @@ export default function MagneticEffect({ children }: MagneticEffectProps) {
         stiffness: 150,
         damping: 15,
         mass: 0.1,
-      }}
-    >
+      }}>
       {children}
     </motion.div>
   )
-}
 }

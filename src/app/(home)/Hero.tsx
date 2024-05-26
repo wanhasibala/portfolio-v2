@@ -5,7 +5,7 @@ const Hero = () => {
     <>
     <div className="w-full h-[100vh] px-[80px] flex">
 
-    <div className="absolute left-[50%] translate-x-[-50%] ">
+    <div className="absolute left-[50%] translate-x-[-50%]">
         <svg
           width="668"
           height="668"
@@ -59,13 +59,13 @@ const Hero = () => {
         </svg>
       </div>
       {/* hero section */}
-      <div className=" mt-[100px] ">
+      <div className=" mt-[160px] z-10 w-full ">
         {/* Hero text */}
-        <div className="flex flex-col bg-[#f8f8f8] opacity-30 p-10 rounded-[20px] backdrop-blur-2xl">
-            <h1 className="text-[48px]">Hi, Im Wan Hasib</h1>
-            <p className="text-xl">Creative web designer & tech enthusiast</p>
+        <div className="flex flex-col bg-[#f8f8f8] bg-opacity-30 p-10 rounded-[20px] backdrop-blur-xl">
+            <h1 className="text-heading-1 font-bold text-blac lg:max-w-[650px]">Hi, Im Wan Hasib</h1>
+            <p className="text-xl lg: max-w-[650px]">Creative web designer & tech enthusiast</p>
         </div>
-            <p className="text-xl mt-10 z-10">Empowering online entrepreneurs to craft standout products with innovative design and strategic development. Let's create something remarkable together.</p>
+            <p className="text-xl mt-10 z-10 lg:max-w-[600px]">Empowering online entrepreneurs to craft standout products with innovative design and strategic development. Let's create something remarkable together.</p>
       </div>
     </div>
     </>
