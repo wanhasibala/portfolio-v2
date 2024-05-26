@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Button from "./Button";
+import { cn } from "@/lib/utils";
 // import Button from "./ui/Button";
 // import Menu from "./ui/Menu";
 // import Magnetic from "../common/Magnetic/Magnetic";
@@ -13,14 +14,56 @@ export default function Navbar() {
   const toggleHamburger = () => {
     setIsActive(!isActive);
   };
+  const [header, setHeader] = useState(false);
+  const scrollHeader = () => {
+    if (window.scrollY > 10) {
+      setHeader(true);
+    } else {
+      setHeader(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHeader);
+    return () => {
+      window.addEventListener("scroll", scrollHeader);
+    };
+  }, []);
+
   return (
-    <nav className="fixed z-[999] w-full flex  justify-between px-6 md:px-12 lg:px-20 mt-[30px] items-center  text-secondary-100">
-      <MagneticEffect>
-        <Link href="/">
-          <Image src={"/Logo.png"} height={56} width={56} alt="logo" />
-        </Link>
-      </MagneticEffect>
-      <Button toggleHamburger={toggleHamburger} isActive={!isActive} />
+    <nav
+      className={cn(
+        "fixed z-[999] w-full flex  justify-between px-6 md:px-12 lg:px-20 mt-[30px] items-center  text-secondary-100 transition-all duration-300 delay-300",
+        { "w-full px-6 md:px-12 lg:px-20": !header }
+      )}
+    >
+      <div className="absolute left-6 md:left-12 lg:left-20 top-[10px]">
+        <MagneticEffect>
+          <Link href="/">
+            <Image src={"/Logo.png"} height={56} width={56} alt="logo" />
+          </Link>
+        </MagneticEffect>
+      </div>
+      <div
+        className={cn("flex gap-5 absolute top-[20px] right-6 md:right-12 lg:right-20", {
+          hidden: header,
+        })}
+      >
+        <MagneticEffect>
+          <Link href="#gallery">Gallery</Link>
+        </MagneticEffect>
+        <MagneticEffect>
+          <Link href="#work">Work</Link>
+        </MagneticEffect>
+        <MagneticEffect>
+          <Link href="#contact">Contact</Link>
+        </MagneticEffect>
+      </div>
+      <Button
+        toggleHamburger={toggleHamburger}
+        isActive={!isActive}
+        header={header}
+      />
     </nav>
   );
 }

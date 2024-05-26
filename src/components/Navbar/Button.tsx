@@ -5,13 +5,15 @@ import React, { useState } from "react";
 export default function Button({
   toggleHamburger,
   isActive,
+  header
 }: {
   toggleHamburger: (status: boolean) => void;
   isActive: boolean;
+  header:boolean
 }) {
   return (
     <>
-      <div className="pointer-events-auto absolute lg:right-20 md:right-12 right-6  z-[51] ">
+      <div className={cn("pointer-events-auto absolute lg:right-20 md:right-12 right-6  z-[51] hidden transition-all duration-300 delay-300 ease-in-out top-[1px]",{"block" :header})}>
         <MagneticEffect>
           <div
             onClick={() => toggleHamburger(!isActive)}
