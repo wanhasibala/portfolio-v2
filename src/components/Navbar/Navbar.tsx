@@ -45,18 +45,25 @@ export default function Navbar() {
         </MagneticEffect>
       </div>
       <div
-        className={cn("flex gap-5 absolute top-[20px] right-6 md:right-12 lg:right-20", {
+        className={cn("flex gap-12 absolute top-[20px] right-6 md:right-12 lg:right-20", {
           hidden: header,
         })}
       >
         <MagneticEffect>
-          <Link href="#gallery">Gallery</Link>
+          <Link href="#gallery" className="flex flex-col group gap-5">
+            Gallery
+            <div className="w-2 h-2 bg-black rounded-full  hidden group-hover:block self-center"/>
+            </Link>
         </MagneticEffect>
         <MagneticEffect>
-          <Link href="#work">Work</Link>
+          <Link href="#work" className="flex flex-col group gap-5">Work
+            <div className="w-2 h-2 bg-black rounded-full  hidden group-hover:block self-center"/>
+          </Link>
         </MagneticEffect>
         <MagneticEffect>
-          <Link href="#contact">Contact</Link>
+          <Link href="#contact" className="flex flex-col group gap-5">Contact
+            <div className="w-2 h-2 bg-black rounded-full  hidden group-hover:block self-center"/>
+          </Link>
         </MagneticEffect>
       </div>
       <Button

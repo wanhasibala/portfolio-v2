@@ -13,7 +13,7 @@ export default function Button({
 }) {
   return (
     <>
-      <div className={cn("pointer-events-auto absolute lg:right-20 md:right-12 right-6  z-[51] hidden transition-all duration-300 delay-300 ease-in-out top-[1px]",{"block" :header})}>
+      <div className={cn("transition-all duration-100 delay-200 pointer-events-auto absolute lg:right-20 md:right-12 -right-12  z-[51] hidden opacity-0  ease-in-out top-[1px]",{" block opacity-100" :header})}>
         <MagneticEffect>
           <div
             onClick={() => toggleHamburger(!isActive)}

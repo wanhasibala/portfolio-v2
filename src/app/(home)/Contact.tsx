@@ -31,40 +31,40 @@ const Contact = () => {
               <p>wanhasib.ala</p>
             </div>
           </div>
-          <form className="flex flex-col w-full gap-5  ">
+          <form className="flex flex-col w-full gap-5  transition-all duration-300 ">
             <div className="w-full flex flex-col gap-5">
-              Name
+             <div className="">Name</div> 
               <input
                 aria-label="name"
                 aria-placeholder="Enter your name"
-                className="w-full rounded-full"
+                className="w-full rounded-full p-2 bg-transparent border-white border  focus:outline-none"
               />
             </div>
             <div className="w-full flex flex-col gap-5">
-              Name
+              Email
               <input
                 aria-label="name"
                 aria-placeholder="Enter your name"
-                className="w-full rounded-full"
+                className="w-full rounded-full py-2 px-4 bg-transparent border-white focus:outline-none border"
               />
             </div>
             <div className="w-full flex flex-col gap-5">
-              Name
-              <input
+              Message
+              <textarea
                 aria-label="name"
                 aria-placeholder="Enter your name"
-                className="w-full rounded-[20px] h-[200px]"
+                className="w-full rounded-[20px] h-[200px] py-2 px-4 bg-transparent border border-white focus:outline-none items-start justify-start flex"
               />
             </div>
             <div className="relative self-center lg:self-start">
 
             <MagneticEffect>
               <button
-                className="h-32 w-32  bg-black rounded-full group flex items-center justify-center gap-2"
+                className="h-32 w-32 transition-all duration-500  bg-black rounded-full group flex items-center justify-center gap-2 hover:bg-[#1D233B] "
                 type="submit"
               >
                 Submit
-                <ArrowUpRight className="hidden group-hover:block transition-transform duration-200 ease-in-out" />
+                <ArrowUpRight className="hidden group-hover:block transition-all duration-500 ease-in-out" />
               </button>
             </MagneticEffect>
             </div>

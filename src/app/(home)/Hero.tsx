@@ -5,7 +5,7 @@ const Hero = () => {
     <header>
     <div className="w-full h-[100vh] px-6 md:px-12 lg:px-20 flex">
 
-    <div className="absolute left-[50%] translate-x-[-50%]">
+    <div className="absolute  left-[50%] translate-x-[-50%]">
         <svg
           width="668"
           height="668"
@@ -59,9 +59,9 @@ const Hero = () => {
         </svg>
       </div>
       {/* hero section */}
-      <div className=" mt-[160px] z-2 w-full h-[60vh] flex flex-col justify-between ">
+      <div className=" mt-[160px] z-2  h-[60vh] flex flex-col justify-between w-full ">
         {/* Hero text */}
-        <div className="flex flex-col bg-[#f8f8f8] bg-opacity-30 p-2.5 rounded-[20px] backdrop-blur-xl">
+        <div className="flex flex-col dark:bg-[#171717] dark:bg-opacity-30 bg-[#f8f8f8] bg-opacity-30 p-2.5 rounded-[20px] backdrop-blur-xl">
             <h1 className="text-title font-bold md:max-w-[600px] lg:max-w-[800px] ">Hi, Im Wan Hasib</h1>
             <p className="text-xl lg: max-w-[650px]">Creative web designer & tech enthusiast</p>
         </div>
