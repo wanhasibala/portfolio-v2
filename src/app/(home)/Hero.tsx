@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-    <div className="w-full h-[100vh] px-[80px] flex">
+    <div className="w-full h-[100vh] px-6 md:px-12 lg:px-20 flex">
 
     <div className="absolute left-[50%] translate-x-[-50%]">
         <svg
@@ -59,13 +59,13 @@ const Hero = () => {
         </svg>
       </div>
       {/* hero section */}
-      <div className=" mt-[160px] z-10 w-full ">
+      <div className=" mt-[160px] z-2 w-full h-[60vh] flex flex-col justify-between ">
         {/* Hero text */}
-        <div className="flex flex-col bg-[#f8f8f8] bg-opacity-30 p-10 rounded-[20px] backdrop-blur-xl">
-            <h1 className="text-heading-1 font-bold text-blac lg:max-w-[650px]">Hi, Im Wan Hasib</h1>
+        <div className="flex flex-col bg-[#f8f8f8] bg-opacity-30 p-2.5 rounded-[20px] backdrop-blur-xl">
+            <h1 className="text-title font-bold md:max-w-[600px] lg:max-w-[800px] ">Hi, Im Wan Hasib</h1>
             <p className="text-xl lg: max-w-[650px]">Creative web designer & tech enthusiast</p>
         </div>
-            <p className="text-xl mt-10 z-10 lg:max-w-[600px]">Empowering online entrepreneurs to craft standout products with innovative design and strategic development. Let's create something remarkable together.</p>
+            <p className="text-xl mt-10 z-10 md:max-w-[600px]">Empowering online entrepreneurs to craft standout products with innovative design and strategic development. Let's create something remarkable together.</p>
       </div>
     </div>
     </>

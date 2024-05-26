@@ -11,7 +11,7 @@ export default function Button({
 }) {
   return (
     <>
-      <div className="pointer-events-auto absolute right-[2.5%]  z-[51] ">
+      <div className="pointer-events-auto absolute lg:right-20 md:right-12 right-6  z-[51] ">
         <MagneticEffect>
           <div
             onClick={() => toggleHamburger(!isActive)}
@@ -24,7 +24,7 @@ export default function Button({
               className={cn(
                 "block h-[1px] w-[40%]  bg-white relative transition-transform origin-bottom-right ",
                 {
-                  "-rotate-45 -translate-y-[5px] -translate-x-[3px] ": isActive,
+                  "-rotate-45 -translate-y-[5px] -translate-x-[3px] ": !isActive,
                 }
               )}
             ></div>
@@ -34,7 +34,7 @@ export default function Button({
 
                 {
                   "rotate-45 translate-y-[5px] -translate-x-[3px] h-[3px] ":
-                    isActive,
+                    !isActive,
                 }
               )}
             ></div>

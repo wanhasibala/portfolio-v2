@@ -14,14 +14,13 @@ export default function Navbar() {
     setIsActive(!isActive);
   };
   return (
-    <nav className="fixed z-10   w-full   flex  justify-between px-[80px] mt-[30px] items-center  text-secondary-100">
-        <MagneticEffect>
-
-      <Link href="/">
-        <Image src={"/Logo.png"} height={56} width={56} alt="logo" />
-      </Link>
-        </MagneticEffect>
-        <Button toggleHamburger={toggleHamburger} isActive={!isActive}/>
+    <nav className="fixed z-[999] w-full flex  justify-between px-6 md:px-12 lg:px-20 mt-[30px] items-center  text-secondary-100">
+      <MagneticEffect>
+        <Link href="/">
+          <Image src={"/Logo.png"} height={56} width={56} alt="logo" />
+        </Link>
+      </MagneticEffect>
+      <Button toggleHamburger={toggleHamburger} isActive={!isActive} />
     </nav>
   );
 }

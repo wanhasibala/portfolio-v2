@@ -15,7 +15,7 @@ const config: Config = {
         'photo-height': 'clamp(4.219rem,16vh, 16.875rem)',
         'image-card': 'clamp(11.875rem, 20vw, 15.625rem)'},
       fontSize: {
-        "title": "clamp(3rem, 9vw, 7rem)",
+        "title": "clamp(3rem, 0.0821rem + 11.7302vw, 8rem)",
         "heading-1": "clamp(2.5rem, 6.5vw, 10rem)",
         "heading-2": "clamp(2.4rem, 5vw, 10rem)",
         "heading-3": "clamp(2rem, 5vw, 2.25rem)",
