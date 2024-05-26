@@ -38,7 +38,7 @@ export const Projects = () => {
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
     <section className=" p-4 md:p-8 my-20">
-      <h1 className="max-w-[1440px] text-secondary-800  text-heading-2 mx-auto text-center">
+      <h1 className="max-w-[800px] text-secondary-800  text-heading-2 mx-auto text-center">
         A Quick Glance of My past Project
       </h1>
 

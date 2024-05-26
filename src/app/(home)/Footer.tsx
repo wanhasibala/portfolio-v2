@@ -16,7 +16,7 @@ export default function Footer() {
     }, 1000);
   });
   return (
-    <div className="my-20 max-w-[1440px] mx-5 lg:mx-auto lg:px-5  font-medium">
+    <div className="my-20 max-w-[1440px] mx-6 md:mx-12 lg:mx-20 lg:px-5  font-medium">
       <div className="flex gap-5 justify-around mb-10">
         <div className="flex flex-col w-full gap-2">
           <div className="border-b border-gray-800 font-semibold ">

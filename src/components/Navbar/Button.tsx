@@ -18,13 +18,13 @@ export default function Button({
           <div
             onClick={() => toggleHamburger(!isActive)}
             className={cn(
-              "bg-black  right-0 m-5 w-16 h-16 rounded-full  cursor-pointer flex flex-col gap-2 items-center justify-center z-20   hover:ring-4 hover:ring- ",
-              { "ring-4": isActive }
+              "bg-black dark:bg-white right-0 m-5 w-16 h-16 rounded-full  cursor-pointer flex flex-col gap-2 items-center justify-center z-20   hover:ring-4 hover:ring-black",
+            
             )}
           >
             <div
               className={cn(
-                "block h-[1px] w-[40%]  bg-white relative transition-transform origin-bottom-right ",
+                "block h-[1px] w-[40%]  bg-white dark:bg-black relative transition-transform origin-bottom-right ",
                 {
                   "-rotate-45 -translate-y-[5px] -translate-x-[3px] ": !isActive,
                 }
@@ -32,7 +32,7 @@ export default function Button({
             ></div>
             <div
               className={cn(
-                "block h-[1px] w-[40%]  bg-white relative transition-transform origin-top-right ",
+                "block h-[1px] w-[40%]  bg-white dark:bg-black relative transition-transform origin-top-right ",
 
                 {
                   "rotate-45 translate-y-[5px] -translate-x-[3px] h-[3px] ":

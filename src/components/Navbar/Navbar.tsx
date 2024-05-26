@@ -5,9 +5,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Button from "./Button";
 import { cn } from "@/lib/utils";
-// import Button from "./ui/Button";
-// import Menu from "./ui/Menu";
-// import Magnetic from "../common/Magnetic/Magnetic";
+import Menu from "./Menu";
+import { ToggleLeft } from "lucide-react";
+
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -71,6 +71,7 @@ export default function Navbar() {
         isActive={!isActive}
         header={header}
       />
+      <Menu isActive={!isActive} toggleHamburger={toggleHamburger}/>
     </nav>
   );
 }
