@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 import Menu from "./Menu";
 import { ToggleLeft } from "lucide-react";
 
-
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
   const toggleHamburger = () => {
@@ -19,8 +18,9 @@ export default function Navbar() {
     if (window.scrollY > 10) {
       setHeader(true);
     } else {
-      setHeader(false);
+    setHeader(false)
     }
+   
   };
 
   useEffect(() => {
@@ -37,7 +37,12 @@ export default function Navbar() {
         { "w-full px-6 md:px-12 lg:px-20": !header }
       )}
     >
-      <div className="absolute left-6 md:left-12 lg:left-20 top-[10px]">
+      <div
+        className={cn(
+          "absolute left-6 md:left-12 lg:left-20 top-[10px] transition-all duration-300",
+          { "hidden": header }
+        )}
+      >
         <MagneticEffect>
           <Link href="/">
             <Image src={"/Logo.png"} height={56} width={56} alt="logo" />
@@ -45,26 +50,34 @@ export default function Navbar() {
         </MagneticEffect>
       </div>
       <div
-        className={cn("flex gap-12 absolute top-[20px] right-6 md:right-12 lg:right-20", {
-          hidden: header,
-        })}
+        className={cn(
+          " absolute top-[20px] right-6 md:right-12 lg:right-20  block",
+          {
+            "hidden": header
+          }
+        )}
       >
+        <div className="hidden md:flex gap-12">
+
         <MagneticEffect>
-          <Link href="#gallery" className="flex flex-col group gap-5">
-            Gallery
-            <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center"/>
-            </Link>
-        </MagneticEffect>
-        <MagneticEffect>
-          <Link href="/project" className="flex flex-col group gap-5">Work
-            <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center"/>
+          <Link href="/project" className="flex flex-col group gap-5">
+            Work
+            <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center" />
           </Link>
         </MagneticEffect>
         <MagneticEffect>
-          <Link href="#contact" className="flex flex-col group gap-5">Contact
-            <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center"/>
+          <Link href="/about" className="flex flex-col group gap-5">
+            About
+            <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center" />
           </Link>
         </MagneticEffect>
+        <MagneticEffect>
+          <Link href="/contact" className="flex flex-col group gap-5">
+            Contact
+            <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center" />
+          </Link>
+        </MagneticEffect>
+        </div>
       </div>
 
       <Button
@@ -72,7 +85,7 @@ export default function Navbar() {
         isActive={!isActive}
         header={header}
       />
-      <Menu isActive={!isActive} toggleHamburger={toggleHamburger}/>
+      <Menu isActive={!isActive} toggleHamburger={toggleHamburger} />
     </nav>
   );
 }

@@ -3,7 +3,7 @@ import { Livvic } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import SmoothScrolling from "@/lib/SmoothScrolling";
-import { Providers } from "./providers/Theme";
+import { Providers } from "../providers/Theme";
 
 const inter = Livvic({
   weight: ["400", "500", "600", "700"],

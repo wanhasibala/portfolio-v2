@@ -34,7 +34,7 @@ export default function Project({
         <h1 className="duration-500 font-light ">{year}</h1>
       </div>
       <div className="block lg:hidden">
-        <img src={src}  alt="image" className="w-full aspect-video rounded-[20px] object-cover"/>
+        <img src={src}  alt="image" className="w-full aspect-video rounded-lg md:rounded-[20px] object-cover"/>
       </div>
     </Link>
   );

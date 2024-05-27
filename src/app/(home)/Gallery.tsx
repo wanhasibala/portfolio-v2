@@ -81,7 +81,7 @@ export default function Gallery() {
     });
   });
   return (
-    <>
+    <div className="flex flex-col">
       <div className=" self-center my-10 flex gap-5  justify-center mx-2  px-4 relative  h-fit">
         <div className=" galery-container   gap-gap mx-4 px-4 flex justify-center">
           <img
@@ -119,14 +119,16 @@ export default function Gallery() {
           expectations.
         </div>
       </div>
-      {/* <div>
+      {/* <div className="my-10 gap-5 border h-[200px]">
+        <div className="flex mb-5 gap-5 ml-[100px] photos">
         <Image
           src="/p.webp"
           alt="1"
           fill
-          sizes="(max-widht:768px) 100vw, (max-widht:1200px) 50vw, 33vw"
+          className="h-[200px]"
         />
+        </div>
       </div> */}
-    </>
+    </div>
   );
 }

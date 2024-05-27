@@ -25,20 +25,12 @@ export default function Menu({
     >
       <div className="text-xl border-b pb-2">Navigation</div>
       <div className="flex flex-col  gap-5">
-        <MagneticEffect>
-          <Link href="/">Home</Link>
-        </MagneticEffect>
-        <MagneticEffect>
-          <Link className="cursor-pointer" href="/gallery">
-            Gallery
-          </Link>
-        </MagneticEffect>
-        <MagneticEffect>
-          <Link href="/project">Project</Link>
-        </MagneticEffect>
-        <MagneticEffect>
-          <Link href="/contact">Contact</Link>
-        </MagneticEffect>
+        <Link href="/" className="hover:-ml-4 duration-300 transition-all">Home</Link>
+        <Link  href="/about" className="hover:-ml-4 duration-300 transition-all">
+          About
+        </Link>
+        <Link href="/project" className="hover:-ml-4 duration-300 transition-all">Project</Link>
+        <Link href="/contact" className="hover:-ml-4 duration-300 transition-all">Contact</Link>
       </div>
       <div>
         <div className="text-xl border-b pb-2 mb-4">Link</div>

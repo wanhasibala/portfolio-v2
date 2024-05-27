@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
-import { Link } from "react-scroll";
+import Link from "next/link";
+
 export default function Footer() {
     
   useEffect(() => {
@@ -23,42 +24,26 @@ export default function Footer() {
             NAVIGATION
           </div>
           <Link
-            to="hero"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
+        href="/" 
             className=" cursor-pointer hover:pl-2 duration-500"
           >
             {" "}
             Home{" "}
           </Link>
           <Link
-            to="Gallery"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
+            href="/about"
             className=" cursor-pointer hover:pl-2 duration-500"
           >
             About
           </Link>
           <Link
-            to="work"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
+           href="/project"
             className="cursor-pointer hover:pl-2 duration-500"
           >
             Work
           </Link>
           <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
+            href="/contact"
             className=" cursor-pointer hover:pl-2 duration-500"
           >
             {" "}

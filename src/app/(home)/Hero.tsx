@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <header>
+    <section>
     <div className="w-full h-[100vh] px-6 md:px-12 lg:px-20 flex">
 
     <div className="absolute  left-[50%] translate-x-[-50%]">
@@ -68,7 +68,7 @@ const Hero = () => {
             <p className="text-xl mt-10 z-10 md:max-w-[600px]">Empowering online entrepreneurs to craft standout products with innovative design and strategic development. Let's create something remarkable together.</p>
       </div>
     </div>
-    </header>
+    </section>
   );
 };
 
