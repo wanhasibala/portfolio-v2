@@ -26,8 +26,8 @@ export function ThemeSwitcher() {
           <Moon />
         </div>
       </div>
-      <div className="cursor-pointer p-2 rounded   dark:bg-zinc-800">
-        <div onClick={(e) => setTheme("auto")}>
+      <div className={cn("cursor-pointer p-2 rounded   dark:bg-zinc-800", {"bg-zinc-200 dark:bg-zinc-600 " :theme==="system" } )}>
+        <div onClick={(e) => setTheme("system")} >
           <Computer />
         </div>
       </div>

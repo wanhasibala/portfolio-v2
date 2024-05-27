@@ -3,6 +3,11 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 
+
+interface Project {
+  src: string;
+  color:string;
+}
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
 
@@ -20,7 +25,7 @@ const scaleAnimation = {
     transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] },
   },
 };
-export default function Modal({ modal, projects, href }: {modal:any, projects:{src:string, color:string}, href:string}) {
+export default function Modal({ modal, projects, href }: {modal:any, projects:Project[], href:string}) {
   const modalContainer = useRef(null);
   const cursor = useRef(null);
   const cursorLabel = useRef(null);

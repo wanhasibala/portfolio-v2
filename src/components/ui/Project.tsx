@@ -19,8 +19,7 @@ export default function Project({
 }: Props) {
   return (
     <Link
-      href={href}
-      target="_blank"
+      href={`/project/${href}`}
       onMouseEnter={() => {
         setModal({ active: true, index });
       }}

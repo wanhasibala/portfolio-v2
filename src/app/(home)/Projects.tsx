@@ -2,37 +2,7 @@
 import React, { useRef, useState } from "react";
 import Project from "@/components/ui/Project";
 import Modal from "@/components/ui/Modal";
-
-const projects = [
-  {
-    title: "Wanderful",
-    year: "20224",
-    src: "/MacBook 01 (1).webp",
-    color: "#000000",
-    href: "https://genuine-pentagon-729201.framer.app/",
-  },
-  {
-    title: "Flutter Cafe",
-    year: "2024",
-    src: "/Frame 5.webp",
-    color: "#8c8c8c",
-    href: "https://grumpy-course-353885.framer.app/",
-  },
-  {
-    title: "Second Brain",
-    year: "2024",
-    src: "/Landing Page (1).webp",
-    color: "#EFE8D3",
-    href: "https://www.figma.com/file/hEbCeGd0sCAT2E9CsYzE48/Mobile?type=design&node-id=1780%3A166&mode=design&t=HszvxqfrMy6e7l5i-1",
-  },
-  {
-    title: "EduCredit",
-    year: "2023",
-    src: "/EduCredit.webp",
-    color: "#028391",
-    href: "https://www.figma.com/file/hEbCeGd0sCAT2E9CsYzE48/Mobile?type=design&node-id=1780%3A166&mode=design&t=HszvxqfrMy6e7l5i-1",
-  },
-];
+import { projects } from "@/data/project";
 
 export const Projects = () => {
   const [modal, setModal] = useState({ active: false, index: 0 });
@@ -47,7 +17,7 @@ export const Projects = () => {
               setModal={setModal}
               key={index}
               year={project.year}
-              href={project.href}
+              href={project.slug}
               src={project.src}
             />
           );
@@ -56,7 +26,7 @@ export const Projects = () => {
       {/* @ts-ignore */}
       <Modal
         modal={modal}
-        projects={projects.map(({ src, color }) => ({ src, color }))}
+        projects={projects}
       />
     </section>
   );
