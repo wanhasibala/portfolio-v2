@@ -56,7 +56,7 @@ const Contact = ({ className }: { className: string }) => {
         {/* Contact Title */}
         <div className="font-semibold text-heading-2 flex flex-col">
           TOGETHER
-          <div className="ml-10 md:ml-20">LET'S WORK</div>
+          <div className="ml-10 md:ml-20">LET&apos;S WORK</div>
         </div>
         {/* Contact content */}
         <div className="flex flex-col lg:flex-row gap-5">

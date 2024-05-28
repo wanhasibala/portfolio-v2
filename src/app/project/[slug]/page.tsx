@@ -64,6 +64,7 @@ const page = ({ params }: { params: { slug: string } }) => {
           {otherProjects.map((project) => {
             return (
               <Link
+              key={project.slug}
                 href={`/project/${project.slug}`}
                 className="rounded-md  gap-2 flex flex-col group relative "
               >

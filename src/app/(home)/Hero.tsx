@@ -65,7 +65,7 @@ const Hero = () => {
             <h1 className="text-title font-bold lg:max-w-[800px] ">Hi, Im Wan Hasib</h1>
             <p className="text-xl lg: max-w-[650px]">Creative web designer & tech enthusiast</p>
         </div>
-            <p className="text-xl mt-10 z-10 md:max-w-[600px]">Empowering online entrepreneurs to craft standout products with innovative design and strategic development. Let's create something remarkable together.</p>
+            <p className="text-xl mt-10 z-10 md:max-w-[600px]">Empowering online entrepreneurs to craft standout products with innovative design and strategic development. Let&apos;s create something remarkable together.</p>
       </div>
     </div>
     </section>
