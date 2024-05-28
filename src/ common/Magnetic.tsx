@@ -14,6 +14,7 @@ export default function MagneticEffect({ children }: MagneticEffectProps) {
 // @ts-ignore
   const handleMouse: React.MouseEventHandler<HTMLDivElement> = (e) => {
     const { clientX, clientY } = e;
+    // @ts-ignore
     const {height, width, left, top} = ref.current?.getBoundingClientRect();
     const middleX = clientX - (left + width/2)
     const middleY = clientY - (top + height/2)
