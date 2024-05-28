@@ -18,9 +18,8 @@ export default function Navbar() {
     if (window.scrollY > 10) {
       setHeader(true);
     } else {
-    setHeader(false)
+      setHeader(false);
     }
-   
   };
 
   useEffect(() => {
@@ -40,7 +39,7 @@ export default function Navbar() {
       <div
         className={cn(
           "absolute left-6 md:left-12 lg:left-20 top-[10px] transition-all duration-300",
-          { "hidden": header }
+          { hidden: header }
         )}
       >
         <MagneticEffect>
@@ -53,30 +52,29 @@ export default function Navbar() {
         className={cn(
           " absolute top-[20px] right-6 md:right-12 lg:right-20  block",
           {
-            "hidden": header
+            hidden: header,
           }
         )}
       >
-        <div className="hidden md:flex gap-12">
-
-        <MagneticEffect>
-          <Link href="/project" className="flex flex-col group gap-5">
-            Work
-            <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center" />
-          </Link>
-        </MagneticEffect>
-        <MagneticEffect>
-          <Link href="/about" className="flex flex-col group gap-5">
-            About
-            <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center" />
-          </Link>
-        </MagneticEffect>
-        <MagneticEffect>
-          <Link href="/contact" className="flex flex-col group gap-5">
-            Contact
-            <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center" />
-          </Link>
-        </MagneticEffect>
+        <div className="hidden sm:flex gap-12">
+          <MagneticEffect>
+            <Link href="/project" className="flex flex-col group gap-5">
+              Work
+              <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center" />
+            </Link>
+          </MagneticEffect>
+          <MagneticEffect>
+            <Link href="/about" className="flex flex-col group gap-5">
+              About
+              <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center" />
+            </Link>
+          </MagneticEffect>
+          <MagneticEffect>
+            <Link href="/contact" className="flex flex-col group gap-5">
+              Contact
+              <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center" />
+            </Link>
+          </MagneticEffect>
         </div>
       </div>
 
