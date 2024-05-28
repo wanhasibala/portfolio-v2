@@ -12,7 +12,10 @@ export default function Footer() {
       let h = now.getHours();
       let m = now.getMinutes();
       let clock = h + ":" + m;
+      if(time){
+
       time.innerHTML = clock;
+      }
     }, 1000);
   });
   return (

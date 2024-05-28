@@ -21,7 +21,7 @@ const Contact = ({ className }: { className: string }) => {
     subject: "",
     message: "",
   });
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
   const handleChange = (e: any) => {
     setFormData({
       ...formData,
@@ -30,6 +30,11 @@ const Contact = ({ className }: { className: string }) => {
   };
   const sendEmail = (e: any) => {
     e.preventDefault();
+    if (!form.current) {
+      console.error("Form is not available");
+      return;
+    }
+
     setFormData({
       first_name: "",
       last_name: "",
@@ -37,16 +42,15 @@ const Contact = ({ className }: { className: string }) => {
       subject: "",
       message: "",
     });
+
     emailjs
-      .sendForm("service_z98kpf6", "template_jwhxnpk", form.current, {
-        publicKey: "2BoY3ZncUyZD-3GWC",
-      })
+      .sendForm("service_z98kpf6", "template_jwhxnpk", form.current, "2BoY3ZncUyZD-3GWC")
       .then(
         () => {
           console.log("SUCCESS");
         },
         (error) => {
-          console.log("Failled...", error.text);
+          console.log("Failed...", error.text);
         }
       );
   };
