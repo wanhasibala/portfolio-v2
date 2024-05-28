@@ -3,12 +3,11 @@ import { useEffect } from "react";
 import Link from "next/link";
 
 export default function Footer() {
-    
   useEffect(() => {
     const time = document.getElementById("datetime");
-    
+
     setInterval(() => {
-        // @ts-ignore
+      // @ts-ignore
       const now = new Date();
       let h = now.getHours();
       let m = now.getMinutes();
@@ -23,21 +22,18 @@ export default function Footer() {
           <div className="border-b border-gray-800 font-semibold ">
             NAVIGATION
           </div>
-          <Link
-        href="/" 
-            className=" cursor-pointer hover:pl-2 duration-500"
-          >
+          <Link href="/" className=" cursor-pointer hover:pl-2 duration-500">
             {" "}
             Home{" "}
           </Link>
           <Link
-            href="/about"
             className=" cursor-pointer hover:pl-2 duration-500"
+            href="/about"
           >
             About
           </Link>
           <Link
-           href="/project"
+            href="/project"
             className="cursor-pointer hover:pl-2 duration-500"
           >
             Work
@@ -52,30 +48,34 @@ export default function Footer() {
         </div>
         <div className="flex flex-col w-full gap-2">
           <div className="border-b border-gray-800 font-semibold">SOCIAL</div>
-          <a
+          <Link
             href="https://www.linkedin.com/in/wanhasib/"
             className="hover:pl-2 duration-500"
+            target="_blank"
           >
             Linkedin
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://github.com/wanhasibala"
             className="hover:pl-2 duration-500"
+            target="_blank"
           >
             Github
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.instagram.com/wanhasib.ala"
             className="hover:pl-2 duration-500"
+            target="_blank"
           >
             Instagram
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://twitter.com/wanhasib_ala"
             className="hover:pl-2 duration-500"
+            target="_blank"
           >
             Twitter
-          </a>
+          </Link>
         </div>
       </div>
       <div className="flex gap-2 items-end justify-around">
@@ -85,7 +85,7 @@ export default function Footer() {
         </div>
         <div className="font-semibold w-full">
           LOCAL TIME
-          <div className="font-medium" id="datetime"/>
+          <div className="font-medium" id="datetime" />
         </div>
       </div>
     </div>
