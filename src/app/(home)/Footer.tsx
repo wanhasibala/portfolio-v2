@@ -1,6 +1,8 @@
 "use client";
 import { useEffect } from "react";
 import Link from "next/link";
+import Contact from "./Contact";
+import { Instagram, Linkedin, LinkedinIcon, Twitter } from "lucide-react";
 
 export default function Footer() {
   useEffect(() => {
@@ -12,85 +14,38 @@ export default function Footer() {
       let h = now.getHours();
       let m = now.getMinutes();
       let clock = h + ":" + m;
-      if(time){
-
-      time.innerHTML = clock;
+      if (time) {
+        time.innerHTML = clock;
       }
     }, 1000);
   });
   return (
-    <div className="my-20 max-w-[1440px] mx-6 md:mx-12 lg:mx-20 lg:px-5  font-medium">
-      <div className="flex gap-5 justify-around mb-10">
-        <div className="flex flex-col w-full gap-2">
-          <div className="border-b border-gray-800 font-semibold ">
-            NAVIGATION
-          </div>
-          <Link href="/" className=" cursor-pointer hover:pl-2 duration-500">
-            {" "}
-            Home{" "}
-          </Link>
-          <Link
-            className=" cursor-pointer hover:pl-2 duration-500"
-            href="/about"
-          >
-            About
-          </Link>
-          <Link
-            href="/project"
-            className="cursor-pointer hover:pl-2 duration-500"
-          >
-            Work
-          </Link>
-          <Link
-            href="/contact"
-            className=" cursor-pointer hover:pl-2 duration-500"
-          >
-            {" "}
-            Contact
-          </Link>
-        </div>
-        <div className="flex flex-col w-full gap-2">
-          <div className="border-b border-gray-800 font-semibold">SOCIAL</div>
-          <Link
-            href="https://www.linkedin.com/in/wanhasib/"
-            className="hover:pl-2 duration-500"
-            target="_blank"
-          >
-            Linkedin
-          </Link>
-          <Link
-            href="https://github.com/wanhasibala"
-            className="hover:pl-2 duration-500"
-            target="_blank"
-          >
-            Github
-          </Link>
-          <Link
-            href="https://www.instagram.com/wanhasib.ala"
-            className="hover:pl-2 duration-500"
-            target="_blank"
-          >
-            Instagram
-          </Link>
-          <Link
-            href="https://twitter.com/wanhasib_ala"
-            className="hover:pl-2 duration-500"
-            target="_blank"
-          >
-            Twitter
-          </Link>
-        </div>
-      </div>
-      <div className="flex gap-2 items-end justify-around">
-        <div className="text-2xl md:text-6xl font-bold w-full">
-          <div>2024</div>
+    <div className="relative h-[100vh]" style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}>
+
+    <div className="fixed  bottom-0 h-fit py-8 mt-20 w-full lg:h-[100vh] overflow-hidden flex flex-col font-medium bg-zinc-800 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-800 justify-end"
+   
+    >
+
+      <Contact className="text-zinc-100 dark:text-zinc-800 pt-0 " />
+      {/* Bottom Nav */}
+      <div className="flex w-full gap-2 items-start px-6 md:px-12 lg:px-20 justify-between">
+        <div className="  text-2xl  font-bold">
           <div>WAN HASIB </div>
         </div>
-        <div className="font-semibold w-full">
-          LOCAL TIME
-          <div className="font-medium" id="datetime" />
+        {/* Navigation */}
+        <div className="flex items-center gap-8">
+          <Link href="/home"> Home</Link>
+          <Link href="/contact"> Contact</Link>
+          <Link href="/about"> About</Link>
+          <Link href="/project">Work </Link>
+        </div>
+        <div className="flex items-center justify-end gap-4">
+          <Link href="https://www.instagram.com/wanhasib.ala/"><Instagram/></Link>
+          <Link href="https://x.com/wanhasib_ala"><Twitter/></Link>
+          <Link href="https://www.linkedin.com/in/wanhasib/" target="_blank" className="dark:bg-zinc-800 bg-zinc-100 dark:text-white text-black p-1 rounded-md"><LinkedinIcon size={24}  /></Link>
         </div>
       </div>
+    </div>
     </div>
   );
 }

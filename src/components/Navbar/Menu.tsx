@@ -35,10 +35,10 @@ export default function Menu({
       <div>
         <div className="text-xl border-b pb-2 mb-4">Link</div>
         <div className="text-lg flex gap-4 ">
-          <a href="https://instagram.com/wanhasib.ala/">Instagram</a>
-          <a href="https://twitter.com/wanhasib_ala">Twitter</a>
-          <a href="https://github.com/wanhasibala">Github</a>
-          <a href="">Email</a>
+          <a href="https://instagram.com/wanhasib.ala/" target="_blank">Instagram</a>
+          <a href="https://twitter.com/wanhasib_ala" target="_blank">Twitter</a>
+          <a href="https://github.com/wanhasibala" target="_blank">Github</a>
+          <a href="mailto:wanhasibal1122@gmail.com">Email</a>
         </div>
       </div>
       <div className="flex dark:bg-[#282828] bg-[#dcdcdc]  w-fit px-4 py-2 rounded-md gap-5">

@@ -3,9 +3,9 @@ import React from "react";
 const Hero = () => {
   return (
     <section>
-    <div className="w-full h-[100vh] px-6 md:px-12 lg:px-20 flex">
+    <div className="w-full h-[100vh] px-6 md:px-12 lg:px-20 flex relative">
 
-    <div className="absolute  left-[50%] translate-x-[-50%]">
+    <div className="absolute  left-[50%] translate-x-[-50%] ">
         <svg
           width="668"
           height="668"

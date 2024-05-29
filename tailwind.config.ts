@@ -19,7 +19,7 @@ const config: Config = {
         "title": "clamp(3rem, 0.0821rem + 11.7302vw, 8rem)",
         "heading-1": "clamp(2.5rem, 6.5vw, 10rem)",
         "heading-2": "clamp(2.4rem, 5vw, 10rem)",
-        "heading-3": "clamp(2rem, 5vw, 2.25rem)",
+        "heading-3": " clamp(2rem, 0.8966rem + 4.5977vw, 3.5rem);",
         "heading-4": "clamp(2rem, 0.543rem + 4.952vw, 4rem)",
         "special": "clamp(1.25rem, 4vw, 1.5rem)",
       },

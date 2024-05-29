@@ -8,7 +8,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const bgContainer = cva(
-  "px-4 md:px-12 py-10 rounded-[20px] flex flex-col gap-10"
+  "px-4 md:px-12 py-5 rounded-[20px] flex flex-col gap-5"
 );
 const inputContainer = cva(
   "w-full rounded-full p-2 bg-transparent focus:outline-none border"
@@ -44,7 +44,12 @@ const Contact = ({ className }: { className: string }) => {
     });
 
     emailjs
-      .sendForm("service_z98kpf6", "template_jwhxnpk", form.current, "2BoY3ZncUyZD-3GWC")
+      .sendForm(
+        "service_z98kpf6",
+        "template_jwhxnpk",
+        form.current,
+        "2BoY3ZncUyZD-3GWC"
+      )
       .then(
         () => {
           console.log("SUCCESS");
@@ -55,43 +60,45 @@ const Contact = ({ className }: { className: string }) => {
       );
   };
   return (
-    <section className="p-6 md:p-12 lg:p-20 text-zinc-950 dark:text-white ">
+    <section className="px-6 md:px-12 lg:px-20 text-zinc-950 dark:text-white ">
       <div className={cn(bgContainer({ className }))}>
         {/* Contact Title */}
-        <div className="font-semibold text-heading-2 flex flex-col">
+        <div className="font-semibold text-heading-3 flex flex-col ">
           TOGETHER
           <div className="ml-10 md:ml-20">LET&apos;S WORK</div>
         </div>
         {/* Contact content */}
-        <div className="flex flex-col lg:flex-row gap-5">
-          <div className="flex flex-col gap-5 w-full">
+        <div className="flex flex-col lg:flex-row gap-2">
+          <div className="flex flex-col gap-2 w-full">
             <p className="flex flex-col">
               We welcome conversations with talented individual. Simply say
               hello and we can begin a fruitful collaboration{" "}
             </p>
-            <Link
-              className="flex items-center gap-2 "
-              href="mailto:wanhasibal1122@gmail.com"
-            >
-              <Mail size={20} />
-              <p>wanhasibal1122@gmail.com</p>
-            </Link>
-            <Link
-              className="flex items-center gap-2"
-              href="https://x.com/wanhasib_ala"
-              target="_blank"
-            >
-              <Twitter size={20} />
-              <p>wanhasib_ala</p>
-            </Link>
-            <Link
-              className="flex items-center gap-2"
-              href="https://www.instagram.com/wanhasib.ala/"
-              target="_blank"
-            >
-              <Instagram size={20} />
-              <p>wanhasib.ala</p>
-            </Link>
+            <div className="hidden md:flex md:flex-col">
+              <Link
+                className="flex items-center gap-2 "
+                href="mailto:wanhasibal1122@gmail.com"
+              >
+                <Mail size={20} />
+                <p>wanhasibal1122@gmail.com</p>
+              </Link>
+              <Link
+                className="flex items-center gap-2"
+                href="https://x.com/wanhasib_ala"
+                target="_blank"
+              >
+                <Twitter size={20} />
+                <p>wanhasib_ala</p>
+              </Link>
+              <Link
+                className="flex items-center gap-2"
+                href="https://www.instagram.com/wanhasib.ala/"
+                target="_blank"
+              >
+                <Instagram size={20} />
+                <p>wanhasib.ala</p>
+              </Link>
+            </div>
           </div>
           {/* @ts-ignore */}
           <form
@@ -128,7 +135,7 @@ const Contact = ({ className }: { className: string }) => {
                 placeholder="Enter your message"
                 className={cn(
                   inputContainer({ className }),
-                  "h-[200px] rounded-[20px]"
+                  "h-[50px] lg:h-[100px] rounded-[20px]"
                 )}
                 onChange={handleChange}
                 value={formData.message}
@@ -137,10 +144,14 @@ const Contact = ({ className }: { className: string }) => {
             <div className="relative self-center lg:self-start">
               <MagneticEffect>
                 <button
-                  className="h-32 w-32 transition-all duration-500  bg-[#BE6B5C] dark:bg-black rounded-full group flex items-center justify-center pl-6 hover:pl-0 gap-2 hover:bg-[#171717]  dark:hover:bg-[#BE6B5C] hover:text-white "
+                  className="h-28 w-28 lg:h-32 lg:w-32 transition-all duration-500 text-white bg-[#BE6B5C]  rounded-full group flex items-center justify-center pl-6 hover:pl-0 gap-2 hover:bg-[#171717]    "
                   type="submit"
                   value="Send"
-                  disabled={!formData.first_name || !formData.user_email || !formData.message}
+                  disabled={
+                    !formData.first_name ||
+                    !formData.user_email ||
+                    !formData.message
+                  }
                 >
                   Submit
                   <ArrowUpRight className="scale-0 group-hover:scale-100 transition-all duration-300 ease-in-out" />

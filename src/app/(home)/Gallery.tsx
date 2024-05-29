@@ -69,13 +69,13 @@ export default function Gallery() {
     let text = new SplitType(".split", { types: "words" });
 
     gsap.from(text.words, {
-      opacity: 0.6,
+      opacity: 0.2,
       stagger: 1,
       ease: "none",
       scrollTrigger: {
         trigger: ".trigger",
-        start: "top center",
-        end: "center center",
+        start: "center center",
+        end: "bottom center",
         scrub: true,
       },
     });
