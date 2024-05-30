@@ -8,6 +8,7 @@ const page = () => {
       <div className="pt-28 ">
         <Contact  className="bg-900 border border-zinc-200 dark:border-zinc-800  "/>
       </div>
+      <div className="h-[40vh]"/>
       <Footer />
     </>
   );

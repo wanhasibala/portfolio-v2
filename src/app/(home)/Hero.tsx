@@ -2,10 +2,8 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section>
-    <div className="w-full h-[100vh] px-6 md:px-12 lg:px-20 flex relative">
-
-    <div className="absolute  left-[50%] translate-x-[-50%] ">
+    <section className="w-[100vw] h-[100vh] px-6 md:px-12 lg:px-20 flex relative overflow-hidden">
+    <div className="absolute  left-[50%] translate-x-[-50%] z-1">
         <svg
           width="668"
           height="668"
@@ -59,7 +57,7 @@ const Hero = () => {
         </svg>
       </div>
       {/* hero section */}
-      <div className=" mt-[160px] z-2  h-[60vh] flex flex-col justify-between w-full ">
+      <div className=" mt-[160px] z-4  h-[60vh] flex flex-col justify-between w-full ">
         {/* Hero text */}
         <div className="flex flex-col dark:bg-[#171717] dark:bg-opacity-30 bg-[#f8f8f8] bg-opacity-30 p-2.5 rounded-[20px] backdrop-blur-xl">
             <h1 className="text-title font-bold lg:max-w-[800px] ">Hi, Im Wan Hasib</h1>
@@ -67,7 +65,6 @@ const Hero = () => {
         </div>
             <p className="text-xl mt-10 z-10 md:max-w-[600px]">Empowering online entrepreneurs to craft standout products with innovative design and strategic development. Let&apos;s create something remarkable together.</p>
       </div>
-    </div>
     </section>
   );
 };

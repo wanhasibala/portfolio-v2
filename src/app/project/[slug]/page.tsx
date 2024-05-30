@@ -11,8 +11,6 @@ const page = ({ params }: { params: { slug: string } }) => {
   const otherProjects = projects.filter(
     (project) => project.slug !== params.slug
   );
-  console.log(otherProjects);
-  // console.log(otherProjects)
   return (
     <>
       <div
@@ -64,7 +62,7 @@ const page = ({ params }: { params: { slug: string } }) => {
           {otherProjects.map((project) => {
             return (
               <Link
-              key={project.slug}
+                key={project.slug}
                 href={`/project/${project.slug}`}
                 className="rounded-md  gap-2 flex flex-col group relative "
               >
@@ -79,12 +77,12 @@ const page = ({ params }: { params: { slug: string } }) => {
                   <div className="text-xs"> {project?.subheading}</div>
                 </div>
               </Link>
-
             );
           })}
         </div>
       </div>
 
+      <div className="h-[40vh]" />
       <Footer />
     </>
   );

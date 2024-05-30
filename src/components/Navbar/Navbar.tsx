@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed z-[999] w-full flex  justify-between px-6 md:px-12 lg:px-20 mt-[30px] items-center  text-secondary-100 transition-all duration-300 delay-300 ",
+        "fixed z-10 w-full flex  justify-between px-6 md:px-12 lg:px-20 mt-[30px] items-center  text-secondary-100 transition-all duration-300 delay-300 ",
         { "w-full px-6 md:px-12 lg:px-20": !header }
       )}
     >

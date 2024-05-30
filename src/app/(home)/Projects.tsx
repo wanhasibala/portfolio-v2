@@ -9,7 +9,7 @@ export const Projects = () => {
   
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
-    <section className=" p-4 md:p-8" >
+    <section className=" p-4 md:p-8 mb-10" >
       <div className=" max-w-[1440px] mt-24 mx-auto">
         {projects.map((project, index) => {
           return (

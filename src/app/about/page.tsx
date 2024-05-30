@@ -33,6 +33,7 @@ const page = () => {
           height={677}
         />
       </div>
+      <div className="h-[40vh]"/>
       <Footer />
     </>
   );
