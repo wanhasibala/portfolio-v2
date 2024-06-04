@@ -1,6 +1,7 @@
 import React from "react";
 import Contact from "../(home)/Contact";
 import Footer from "../(home)/Footer";
+import Curve from "@/components/Curve/Curve";
 
 const page = () => {
   return (
