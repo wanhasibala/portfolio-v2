@@ -7,6 +7,7 @@ import Button from "./Button";
 import { cn } from "@/lib/utils";
 import Menu from "./Menu";
 import { ToggleLeft } from "lucide-react";
+import TransitionLink from "../Curve/TransitionLink";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -58,22 +59,22 @@ export default function Navbar() {
       >
         <div className="hidden sm:flex gap-12">
           <MagneticEffect>
-            <Link href="/project" className="flex flex-col group gap-5">
+            <TransitionLink href="/project" >
               Work
               <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center" />
-            </Link>
+            </TransitionLink>
           </MagneticEffect>
           <MagneticEffect>
-            <Link href="/about" className="flex flex-col group gap-5">
+            <TransitionLink href="/about" >
               About
               <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center" />
-            </Link>
+            </TransitionLink>
           </MagneticEffect>
           <MagneticEffect>
-            <Link href="/contact" className="flex flex-col group gap-5">
+            <TransitionLink href="/contact" >
               Contact
               <div className="w-2 h-2 dark:bg-white bg-black rounded-full  hidden group-hover:block self-center" />
-            </Link>
+            </TransitionLink>
           </MagneticEffect>
         </div>
       </div>

@@ -57,9 +57,9 @@ const Hero = () => {
         </svg>
       </div>
       {/* hero section */}
-      <div className=" mt-[160px] z-4  h-[60vh] flex flex-col justify-between w-full ">
+      <div className=" mt-[160px] z-2  h-[60vh] flex flex-col justify-between w-full ">
         {/* Hero text */}
-        <div className="flex flex-col dark:bg-[#171717] dark:bg-opacity-30 bg-[#f8f8f8] bg-opacity-30 p-2.5 rounded-[20px] backdrop-blur-xl z-10">
+        <div className="flex flex-col dark:bg-[#171717] dark:bg-opacity-30 bg-[#f8f8f8] bg-opacity-30 p-2.5 rounded-[20px] backdrop-blur-xl z-2">
             <h1 className="text-title font-bold lg:max-w-[800px] ">Hi, Im Wan Hasib</h1>
             <p className="text-xl lg: max-w-[650px]">Creative web designer & tech enthusiast</p>
         </div>
