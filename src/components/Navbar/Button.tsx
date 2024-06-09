@@ -15,7 +15,7 @@ export default function Button({
     <>
       <div
         className={cn(
-          "transition-all duration-100 delay-200 pointer-events-auto absolute lg:right-20 md:right-12 right-2 z-[51] hidden opacity-0  ease-in-out top-[1px]",
+          "transition-all duration-100 delay-200 pointer-events-auto absolute lg:right-20 md:right-12 right-2 z-20 hidden opacity-0  ease-in-out top-[1px]",
           { " block opacity-100": header },
         )}
       >
