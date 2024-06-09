@@ -74,7 +74,7 @@ export default function Preloader() {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="h-[100vh] w-[100vw] flex items-center justify-center fixed z-50 bg-[#171717]"
+      className="h-[100vh] w-[100vw] flex items-center justify-center fixed z-50 bg-[#171717] dark:bg-neutral-200"
     >
       {dimension.width > 0 && (
         <>
@@ -82,21 +82,13 @@ export default function Preloader() {
             variants={opacity}
             initial="initial"
             animate="enter"
-            className="flex text-white items-center absolute z-[49] "
+            className="flex text-white dark:text-black items-center absolute z-[49] "
           >
             {" "}
-            <span className="block w-3 h-3 bg-white rounded-full mr-3"></span>
+            <span className="block w-3 h-3 bg-white dark:bg-black rounded-full mr-3"></span>
             {words[index]}
           </motion.p>
-          <svg className="absolute top-0 w-full h-[calc(100% +300px)] z-50">
-            <motion.path
-              fill="#171717"
-              variants={curve}
-              initial="initial"
-              exit="exit"
-            ></motion.path>
-          </svg>
-        </>
+                  </>
       )}
     </motion.div>
   );
