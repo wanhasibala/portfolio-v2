@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section className="w-[100vw] h-[100vh] px-6 md:px-12 lg:px-20 flex relative overflow-hidden">
-    <div className="absolute  left-[50%] translate-x-[-50%] z-1">
+    <div className="absolute  left-[50%] translate-x-[-50%] ">
         <svg
           width="668"
           height="668"
