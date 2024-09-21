@@ -11,6 +11,11 @@ const page = ({ params }: { params: { slug: string } }) => {
   const otherProjects = projects.filter(
     (project) => project.slug !== params.slug
   );
+  // const image_body = project?.src_body?.length
+  let imageCount = 0;
+  project?.src_body?.forEach(() => {
+    imageCount++;
+  });
   return (
     <>
       <div
@@ -20,6 +25,18 @@ const page = ({ params }: { params: { slug: string } }) => {
         <div className="flex flex-col w-full">
           <h1 className="text-heading-1 font-semibold">{project?.title}</h1>
           <h2 className="text-2xl font-medium">{project?.subheading}</h2>
+          <div className="flex mt-4 text-xs   gap-4">
+            {project?.technologies.map((text, index) => {
+              return (
+                <div
+                  key={index}
+                  className="bg-[#BE6B5C] border px-4 py-1 rounded-full"
+                >
+                  {text}
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         <div className="relative w-full mt-20 ">
@@ -42,23 +59,45 @@ const page = ({ params }: { params: { slug: string } }) => {
             alt="header image"
           />
         </div>
-        <div className="max-w-[800px] self-center"> {project?.description}</div>
-        <div className="grid gap-5 overflow-hidden w-full grid-cols-2 ">
-          <img
-            src={project?.src}
-            className="rounded-md object-contain"
-            alt="shotimage"
-          />
-          <img
-            src={project?.src}
-            className=" rounded-md object-contain"
-            alt="shotimage"
-          />
+        <div className="max-w-[800px] self-center text-justify ">
+          {" "}
+          {project?.description}
         </div>
-        <div className="max-w-[800px] self-center"> {project?.description}</div>
+        <div className="grid gap-5 overflow-hidden w-full md:grid-cols-2">
+          {project?.src_body && (
+            <>
+              {project?.src_body?.map((src, index) => {
+                return (
+                  <>
+                    {imageCount > 1 ? (
+                      <img
+                        src={src}
+                        key={index}
+                        className="rounded-md object-cover w-full aspect-video"
+                      />
+                    ): (
+                      <img
+                        src={src}
+                        key={index}
+                        className="rounded-md object-cover w-full aspect-video col-span-2"
+                      /> 
+                    )}
+                  </>
+                );
+              })}
+            </>
+          )}
+        </div>
+        <div className="max-w-[800px] self-center text-justify">
+          {" "}
+          {project?.detail}
+        </div>
         <h3 className="text-4xl mt-20 font-medium">Related Project</h3>
 
-        <div key={project?.slug} className="grid grid-cols-3 gap-5 w-full ">
+        <div
+          key={project?.slug}
+          className="grid grid-cols-2 gap-5 w-full md:grid-cols-3"
+        >
           {otherProjects.map((project) => {
             return (
               <Link
@@ -70,7 +109,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                 <img
                   src={project?.src}
                   alt=""
-                  className="w-full object-cover aspect-[3/4] rounded-md"
+                  className="w-full object-cover aspect-[3/2] rounded-md"
                 />
                 <div className="p-2 flex flex-col gap-2">
                   <div>{project?.title}</div>
