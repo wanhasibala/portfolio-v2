@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { projects } from "@/data/project";
 import Image from "next/image";
@@ -5,6 +6,7 @@ import Footer from "@/app/(home)/Footer";
 import { ArrowUpRight } from "lucide-react";
 import MagneticEffect from "@/ common/Magnetic";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const page = ({ params }: { params: { slug: string } }) => {
   const project = projects.find((project) => project.slug === params.slug);
@@ -12,6 +14,8 @@ const page = ({ params }: { params: { slug: string } }) => {
     (project) => project.slug !== params.slug
   );
   // const image_body = project?.src_body?.length
+  const pathname = usePathname();
+
   let imageCount = 0;
   project?.src_body?.forEach(() => {
     imageCount++;
@@ -41,17 +45,19 @@ const page = ({ params }: { params: { slug: string } }) => {
 
         <div className="relative w-full mt-20 ">
           <div className="absolute -top-20 right-10">
-            <MagneticEffect>
-              <Link
-                className="h-32 w-32 transition-all duration-500  bg-[#BE6B5C]  rounded-full group flex items-center justify-center pl-6 hover:pl-0 gap-2   text-white "
-                // @ts-ignore
-                href={project?.href}
-                target="_blank"
-              >
-                Live site
-                <ArrowUpRight className="scale-0 group-hover:scale-100 transition-all duration-300 ease-in-out" />
-              </Link>
-            </MagneticEffect>
+            {pathname !== "/project/vivre" && (
+              <MagneticEffect>
+                <Link
+                  className="h-32 w-32 transition-all duration-500  bg-[#BE6B5C]  rounded-full group flex items-center justify-center pl-6 hover:pl-0 gap-2   text-white "
+                  // @ts-ignore
+                  href={project?.href}
+                  target="_blank"
+                >
+                  Live site
+                  <ArrowUpRight className="scale-0 group-hover:scale-100 transition-all duration-300 ease-in-out" />
+                </Link>
+              </MagneticEffect>
+            )}
           </div>
           <img
             src={project?.src}
@@ -75,12 +81,12 @@ const page = ({ params }: { params: { slug: string } }) => {
                         key={index}
                         className="rounded-md object-cover w-full aspect-video"
                       />
-                    ): (
+                    ) : (
                       <img
                         src={src}
                         key={index}
                         className="rounded-md object-cover w-full aspect-video col-span-2"
-                      /> 
+                      />
                     )}
                   </>
                 );
