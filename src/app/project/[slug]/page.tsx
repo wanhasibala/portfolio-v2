@@ -8,7 +8,7 @@ import MagneticEffect from "@/ common/Magnetic";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const page = ({ params }: { params: { slug: string } }) => {
+const Page = ({ params }: { params: { slug: string } }) => {
   const project = projects.find((project) => project.slug === params.slug);
   const otherProjects = projects.filter(
     (project) => project.slug !== params.slug
@@ -133,4 +133,4 @@ const page = ({ params }: { params: { slug: string } }) => {
   );
 };
 
-export default page;
+export default Page;
