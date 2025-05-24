@@ -82,6 +82,13 @@ export default function Gallery() {
   });
   return (
     <div className="flex flex-col">
+      <div className="  mb-20 lg:h-[70vh] pt-[30vh] max-w-[1440px] mx-auto  px-4 md:px-12 text-heading-3  text-center my-10 text-secondary-800 trigger ">
+        <div className="split ">
+          I am a Product Design with a keen eye for aesthetics and a commitment
+          to crafting digital experiences that not only meet but exceed user
+          expectations.
+        </div>
+      </div>
       <div className=" self-center my-10 flex gap-5  justify-center mx-2  px-4 relative  h-fit">
         <div className=" galery-container   gap-gap mx-4 px-4 flex justify-center">
           <img
@@ -112,13 +119,6 @@ export default function Gallery() {
         </div>
       </div>
 
-      <div className="  mb-20 lg:h-[70vh] pt-[30vh] max-w-[1440px] mx-auto  px-4 md:px-12 text-heading-3  text-center my-10 text-secondary-800 trigger ">
-        <div className="split ">
-          I am a Product Design with a keen eye for aesthetics and a commitment
-          to crafting digital experiences that not only meet but exceed user
-          expectations.
-        </div>
-      </div>
       {/* <div className="my-10 gap-5 border h-[200px]">
         <div className="flex mb-5 gap-5 ml-[100px] photos">
         <Image
