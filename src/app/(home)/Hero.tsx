@@ -37,7 +37,7 @@ const Hero = () => {
   return (
     <section className="w-[100vw]  px-6 md:px-12 lg:px-20 flex relative  ">
       <div className="  left-[50%] translate-x-[-50%] "></div>
-      <div className="text-xl">
+      <div className="text-xl hidden md:block">
         <div className="absolute left-[15%] top-[25%]">FE</div>
         <div className="absolute left-[20%] top-[45%]">UI</div>
         <div className="absolute left-[85%] top-[25%]">CSS</div>
@@ -52,7 +52,7 @@ const Hero = () => {
           </h1>
 
           <div className="flex flex-col relative items-center">
-            <div className="-mt-2 shadow-[0_-20px_50px_rgba(11,_11,_11)] w-[280px] sm:w-[400px] md:w-[500px] lg:w-[600px] aspect-square inset-0 bg-[#7580A8] z-[2] rounded-full">
+            <div className="-mt-4 sm:-mt-8 md:-mt-12 shadow-[0_-20px_50px_rgba(11,_11,_11)] w-[280px] sm:w-[400px] md:w-[500px] lg:w-[600px] aspect-square inset-0 bg-[#7580A8] z-[2] rounded-full">
               <Image
                 src="/image 2.png"
                 alt="Hero Image"
@@ -65,7 +65,7 @@ const Hero = () => {
             <div className="absolute bottom-10 w-[110vw]  bg-[#F6AC9F] h-20 sm:h-24 md:h-28 lg:h-32 -mt-40 rotate-6 z-[1] flex gap-20 sm:gap-30 md:gap-40 justify-between items-center">
               <div
                 ref={firstTextRef}
-                className="flex gap-40 w-full justify-center items-center h-full"
+                className="flex gap-0 w-full justify-center items-center h-full"
               >
                 {runningText.map((text, index) => (
                   <div
@@ -92,13 +92,10 @@ const Hero = () => {
             <div className="absolute bottom-10 w-[110vw] bg-[#576187] h-20 sm:h-24 md:h-28 lg:h-32 -mt-40 -rotate-6 z-[4]">
               <div
                 ref={secondTextRef}
-                className="flex gap-40 w-full justify-center items-center h-full"
+                className="flex  w-full justify-center items-center h-full"
               >
                 {runningText.map((text, index) => (
-                  <div
-                    key={index}
-                    className="flex gap-40 items-center text-4xl"
-                  >
+                  <div key={index} className="flex  gap-10 mr-10 md:gap-20 md:mr-20 lg:gap-40 lg:mr-40 items-center text-4xl">
                     <div className="text-4xl font-bold text-white">{text}</div>
                     <svg
                       width="46"
