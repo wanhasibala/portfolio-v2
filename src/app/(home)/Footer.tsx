@@ -32,7 +32,7 @@ export default function Footer() {
             <div>WAN HASIB </div>
           </div>
           {/* Navigation */}
-          <div className="flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8 ">
             <Link href="/home"> Home</Link>
             <Link href="/contact"> Contact</Link>
             <Link href="/about"> About</Link>

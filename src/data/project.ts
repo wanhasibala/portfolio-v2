@@ -37,7 +37,7 @@ export const projects = [
     subheading: "Your Ultimate Travel Planner",
     year: "2024",
     src: "/8.webp",
-    src_body: ["/flutter-cafe-body1.png", "/flutter-cafe-body2.png"],
+    src_body: ["/flutter-cafe-body1.png", "/flutter-cafe-body2.png", "/flutter-cafe-body2.png"],
     color: "#000000",
     href: "https://genuine-pentagon-729201.framer.app/",
     description:

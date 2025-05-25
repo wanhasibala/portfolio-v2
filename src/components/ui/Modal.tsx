@@ -1,12 +1,11 @@
-"use client"
+"use client";
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 
-
 interface Project {
   src: string;
-  color:string;
+  color: string;
 }
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
@@ -25,7 +24,15 @@ const scaleAnimation = {
     transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] },
   },
 };
-export default function Modal({ modal, projects, href }: {modal:any, projects:Project[], href:string}) {
+export default function Modal({
+  modal,
+  projects,
+  href,
+}: {
+  modal: any;
+  projects: Project[];
+  href: string;
+}) {
   const modalContainer = useRef(null);
   const cursor = useRef(null);
   const cursorLabel = useRef(null);
@@ -94,7 +101,7 @@ export default function Modal({ modal, projects, href }: {modal:any, projects:Pr
           style={{ top: index * -100 + "%" }}
           className="h-full w-full absolute duration-500"
         >
-            {/* @ts-ignore */}
+          {/* @ts-ignore */}
           {projects.map((project, index) => {
             const { src, color } = project;
             return (
@@ -128,7 +135,9 @@ export default function Modal({ modal, projects, href }: {modal:any, projects:Pr
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-      >View</motion.div>
+      >
+        View
+      </motion.div>
     </div>
   );
 }

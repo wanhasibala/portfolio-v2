@@ -62,7 +62,7 @@ const Hero = () => {
                 priority
               />
             </div>
-            <div className="absolute bottom-10 w-[110vw]  bg-[#F6AC9F] h-20 sm:h-24 md:h-28 lg:h-32 -mt-40 rotate-6 z-[1] flex gap-20 sm:gap-30 md:gap-40 justify-between items-center">
+            <div className="absolute bottom-10 w-[110vw]  bg-[#F6AC9F] h-20 sm:h-24 md:h-28 lg:h-32 -mt-40 rotate-6 z-[1] flex   justify-between items-center">
               <div
                 ref={firstTextRef}
                 className="flex gap-0 w-full justify-center items-center h-full"
@@ -70,7 +70,7 @@ const Hero = () => {
                 {runningText.map((text, index) => (
                   <div
                     key={index}
-                    className="flex gap-40 items-center text-4xl "
+                    className="flex  gap-10 mr-10 md:gap-20 md:mr-20 lg:gap-40 lg:mr-40 items-center text-4xl"
                   >
                     <div className="text-4xl font-bold text-black">{text}</div>
                     <svg
@@ -95,7 +95,10 @@ const Hero = () => {
                 className="flex  w-full justify-center items-center h-full"
               >
                 {runningText.map((text, index) => (
-                  <div key={index} className="flex  gap-10 mr-10 md:gap-20 md:mr-20 lg:gap-40 lg:mr-40 items-center text-4xl">
+                  <div
+                    key={index}
+                    className="flex  gap-10 mr-10 md:gap-20 md:mr-20 lg:gap-40 lg:mr-40 items-center text-4xl"
+                  >
                     <div className="text-4xl font-bold text-white">{text}</div>
                     <svg
                       width="46"
