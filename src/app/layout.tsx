@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import SmoothScrolling from "@/lib/SmoothScrolling";
 import { Providers } from "../providers/Theme";
+import { VerticalProvider } from "../providers/VerticalContext";
 
 const inter = Livvic({
   weight: ["400", "500", "600", "700"],
@@ -24,10 +25,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <SmoothScrolling>
-            <Navbar />
-            {children}
-          </SmoothScrolling>
+          <VerticalProvider>
+            <SmoothScrolling>
+              <Navbar />
+              {children}
+            </SmoothScrolling>
+          </VerticalProvider>
         </Providers>
       </body>
     </html>

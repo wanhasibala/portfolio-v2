@@ -7,9 +7,11 @@ import React from "react";
 export default function TransitionLink({
   href,
   children,
+  className,
 }: {
   href: string;
   children: React.ReactNode;
+  className?: string;
 }) {
   const router = useRouter();
 
@@ -18,7 +20,7 @@ export default function TransitionLink({
   };
 
   return (
-    <button className="flex flex-col group gap-5" onClick={handleClick}>
+    <button className={className || "flex flex-col group gap-5"} onClick={handleClick}>
       {children}
     </button>
   );

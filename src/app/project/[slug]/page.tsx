@@ -104,28 +104,61 @@ const Page = ({ params }: { params: { slug: string } }) => {
         </div>
 
         <div className="relative w-full mt-20 ">
-          <div className="absolute -top-20 right-10">
-            {pathname !== "/project/vivre" && (
-              <MagneticEffect>
-                <Link
-                  className="h-32 w-32 transition-all duration-500  bg-[#BE6B5C]  rounded-full group flex items-center justify-center pl-6 hover:pl-0 gap-2   text-white "
-                  href={project?.href || "/"}
-                  target="_blank"
-                >
-                  Live site
-                  <ArrowUpRight className="scale-0 group-hover:scale-100 transition-all duration-300 ease-in-out" />
-                </Link>
-              </MagneticEffect>
-            )}
-          </div>
           <img
             src={project?.src}
-            className="w-full aspect-video object-cover rounded-xl md:rounded-4xl"
+            className="w-full aspect-video object-cover rounded-xl md:rounded-3xl border border-neutral-200 dark:border-neutral-800"
             alt="header image"
           />
         </div>
-        <div className="max-w-[800px] self-center text-justify ">
-          {" "}
+
+        {/* Deep Case Study Blueprint Section */}
+        <div className="w-full max-w-4xl mt-12 grid grid-cols-1 gap-8">
+          
+          {/* 1. System Bottleneck Hook Card */}
+          <div className="border border-red-200 dark:border-red-950/60 bg-red-50/50 dark:bg-red-950/10 p-6 rounded-2xl">
+            <h3 className="text-sm font-mono uppercase tracking-widest text-red-600 dark:text-red-400 font-bold mb-3 flex items-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+              </span>
+              System Bottleneck Hook
+            </h3>
+            <p className="text-neutral-800 dark:text-neutral-300 font-medium text-base md:text-lg leading-relaxed">
+              {project?.bottleneckHook}
+            </p>
+          </div>
+
+          {/* 2. High-Contrast Component Architecture Visual Map */}
+          <div className="border border-neutral-200 dark:border-neutral-800/80 bg-neutral-50 dark:bg-[#111] p-6 rounded-2xl">
+            <h3 className="text-sm font-mono uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-bold mb-4 flex items-center gap-2">
+              Component Architecture & State Map
+            </h3>
+            <pre className="font-mono text-xs md:text-sm text-neutral-800 dark:text-neutral-200 overflow-x-auto leading-relaxed bg-white dark:bg-black/50 border border-neutral-100 dark:border-neutral-900 p-4 rounded-xl">
+              {project?.architectureMap?.join("\n")}
+            </pre>
+          </div>
+
+          {/* 3. Single Low-Friction Github Deployment Verification Link */}
+          <div className="border border-neutral-200 dark:border-neutral-800/80 bg-white dark:bg-neutral-900/40 p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+              <h4 className="font-semibold text-neutral-900 dark:text-white">Verify Implementation Source</h4>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400">Review complete codebase structure and performance optimization metrics on GitHub.</p>
+            </div>
+            <a 
+              href={project?.deploymentLink || "#"} 
+              target="_blank" 
+              rel="noreferrer"
+              className="flex items-center gap-2 bg-neutral-900 hover:bg-neutral-800 text-white dark:bg-white dark:hover:bg-neutral-100 dark:text-neutral-950 px-5 py-3 rounded-lg text-sm font-semibold transition-all active:scale-95 whitespace-nowrap"
+            >
+              Verify Code on GitHub
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </div>
+
+        </div>
+
+        {/* Gallery & Descriptions */}
+        <div className="max-w-[800px] mt-8 self-center text-justify text-neutral-600 dark:text-neutral-300">
           {project?.description}
         </div>
         <div className="grid gap-5 overflow-hidden w-full md:grid-cols-2">
@@ -139,7 +172,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
                   <img
                     key={`project-image-${index}`}
                     src={src}
-                    className={`rounded-md object-cover w-full aspect-video  ${
+                    className={`rounded-md object-cover w-full aspect-video border border-neutral-200 dark:border-neutral-900 ${
                       !isOdd && isLastImage ? "col-span-2" : ""
                     }`}
                     alt={`Project image ${index}`}
@@ -149,8 +182,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
             </>
           )}
         </div>
-        <div className="max-w-[800px] self-center text-justify">
-          {" "}
+        <div className="max-w-[800px] self-center text-justify text-neutral-600 dark:text-neutral-300">
           {project?.detail}
         </div>
         <h3 className="text-xl mt-20 font-medium">Next Project</h3>

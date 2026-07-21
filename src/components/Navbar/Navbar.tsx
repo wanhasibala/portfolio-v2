@@ -45,7 +45,7 @@ export default function Navbar() {
       >
         <MagneticEffect>
           <Link href="/">
-            <Image src={"/Logo.png"} height={56} width={56} alt="logo" />
+            {/* <Image src={"/Logo.png"} height={56} width={56} alt="logo" /> */}
           </Link>
         </MagneticEffect>
       </div>
