@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    /* Light Mode (Browser Tab Putih / Terang) */
+    .bg {
+      fill: #18181b;
+    }
+    .circle-main {
+      fill: #ffffff;
+    }
+    .circle-secondary {
+      fill: #a1a1aa;
+    }
+
+    /* Dark Mode (Browser Tab Hitam / Gelap) */
+    @media (prefers-color-scheme: dark) {
+      .bg {
+        fill: #f4f4f5;
+      }
+      .circle-main {
+        fill: #18181b;
+      }
+      .circle-secondary {
+        fill: #71717a;
+      }
+    }
+  </style>
+
+  <!-- Background rounded box -->
+  <rect width="100" height="100" rx="22" class="bg" />
+
+  <!-- Lingkaran utama -->
+  <circle cx="40" cy="50" r="16" class="circle-main" />
+
+  <!-- Lingkaran pendukung -->
+  <circle cx="70" cy="50" r="8" class="circle-secondary" />
+</svg>

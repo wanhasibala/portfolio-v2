@@ -4,18 +4,18 @@ import Link from "next/link";
 interface Props {
   title: string;
   setModal: any;
-  year: string;
+  year?: string;
   index: number;
-  href: string;
-  src: string;
+  href?: string;
+  src?: string;
 }
 export default function Project({
   title,
   setModal,
-  year,
+  year = "",
   index,
-  href,
-  src,
+  href = "",
+  src = "",
 }: Props) {
   return (
     <Link

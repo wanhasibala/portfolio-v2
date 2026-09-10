@@ -45,7 +45,7 @@ export default function Preloader() {
       () => {
         setIndex(index + 1);
       },
-      index == 0 ? 1000 : 150
+      index == 0 ? 1000 : 150,
     );
   }, [index]);
 
@@ -74,7 +74,7 @@ export default function Preloader() {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="h-[100vh] w-[100vw] flex items-center justify-center fixed z-50 bg-[#171717] dark:bg-neutral-200"
+      className="h-[100vh] w-[100vw] flex items-center justify-center fixed z-50 bg-neutral-200 dark:bg-[#171717]"
     >
       {dimension.width > 0 && (
         <>
@@ -82,14 +82,15 @@ export default function Preloader() {
             variants={opacity}
             initial="initial"
             animate="enter"
-            className="flex text-white dark:text-black items-center absolute z-[49] "
+            className="flex text-black dark:text-white items-center absolute z-[49] "
           >
             {" "}
-            <span className="block w-3 h-3 bg-white dark:bg-black rounded-full mr-3"></span>
+            <span className="block w-3 h-3 bg-black dark:bg-white rounded-full mr-3"></span>
             {words[index]}
           </motion.p>
-                  </>
+        </>
       )}
     </motion.div>
   );
 }
+

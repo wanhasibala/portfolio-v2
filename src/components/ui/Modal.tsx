@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 
 interface Project {
-  src: string;
-  color: string;
+  src?: string;
+  color?: string;
+  [key: string]: any;
 }
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
@@ -31,7 +32,7 @@ export default function Modal({
 }: {
   modal: any;
   projects: Project[];
-  href: string;
+  href?: string;
 }) {
   const modalContainer = useRef(null);
   const cursor = useRef(null);

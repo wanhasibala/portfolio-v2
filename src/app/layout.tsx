@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import SmoothScrolling from "@/lib/SmoothScrolling";
 import { Providers } from "../providers/Theme";
 import { VerticalProvider } from "../providers/VerticalContext";
+import { cn } from "@/lib/utils";
 
 const inter = Livvic({
   weight: ["400", "500", "600", "700"],
@@ -14,6 +15,14 @@ const inter = Livvic({
 export const metadata: Metadata = {
   title: "Wan Hasib",
   description: "Wan Hasib's Portfolio ",
+  icons: {
+    icon: [
+      {
+        url: "/gemini-svg.svg",
+        type: "image/svg+xml",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -22,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans")}>
       <body className={inter.className}>
         <Providers>
           <VerticalProvider>

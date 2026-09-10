@@ -27,7 +27,7 @@ export default function Home() {
     })();
   }, []);
   return (
-    <div className="overflow-hidden w-[100vw]">
+    <div className="overflow-hidden w-[100vw] bg-neutral-200 dark:bg-neutral-900 ">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>

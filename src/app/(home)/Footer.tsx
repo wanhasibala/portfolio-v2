@@ -24,8 +24,8 @@ export default function Footer() {
       className="relative h-[100vh]"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="fixed  bottom-0 h-fit py-8 mt-20 w-full lg:h-[100vh] overflow-hidden flex flex-col font-medium bg-zinc-800 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-800 justify-end">
-        <Contact className="text-zinc-100 dark:text-zinc-800 pt-0 " />
+      <div className="fixed  bottom-0 h-fit py-8 mt-20 w-full lg:h-[100vh] overflow-hidden flex flex-col font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100 justify-end">
+        <Contact className="text-zinc-800 dark:text-zinc-100 pt-0 " />
         {/* Bottom Nav */}
         <div className="flex w-full gap-2 items-start px-6 md:px-12 lg:px-20 justify-between">
           <div className="  text-2xl  font-bold">
@@ -48,7 +48,7 @@ export default function Footer() {
             <Link
               href="https://www.linkedin.com/in/wanhasib/"
               target="_blank"
-              className="dark:bg-zinc-800 bg-zinc-100 dark:text-white text-black p-1 rounded-md"
+              className="dark:bg-zinc-100 bg-zinc-800 dark:text-white text-black p-1 rounded-md"
             >
               <LinkedinIcon size={24} />
             </Link>

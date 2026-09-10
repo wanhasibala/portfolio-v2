@@ -8,10 +8,10 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const bgContainer = cva(
-  "px-4 md:px-12 py-5 rounded-[20px] flex flex-col gap-5"
+  "px-4 md:px-12 py-5 rounded-[20px] flex flex-col gap-5",
 );
 const inputContainer = cva(
-  "w-full rounded-full p-2 bg-transparent focus:outline-none border"
+  "w-full rounded-full p-5 bg-transparent focus:outline-none border items-center",
 );
 const Contact = ({ className }: { className: string }) => {
   const [formData, setFormData] = useState({
@@ -48,7 +48,7 @@ const Contact = ({ className }: { className: string }) => {
         "service_z98kpf6",
         "template_jwhxnpk",
         form.current,
-        "2BoY3ZncUyZD-3GWC"
+        "2BoY3ZncUyZD-3GWC",
       )
       .then(
         () => {
@@ -56,7 +56,7 @@ const Contact = ({ className }: { className: string }) => {
         },
         (error) => {
           console.log("Failed...", error.text);
-        }
+        },
       );
   };
   return (
@@ -135,7 +135,7 @@ const Contact = ({ className }: { className: string }) => {
                 placeholder="Enter your message"
                 className={cn(
                   inputContainer({ className }),
-                  "h-[50px] lg:h-[100px] rounded-[20px]"
+                  "h-[50px] lg:h-[100px] rounded-[20px]",
                 )}
                 onChange={handleChange}
                 value={formData.message}
