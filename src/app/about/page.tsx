@@ -1,6 +1,13 @@
 import React from "react";
 import Footer from "../(home)/Footer";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "About Wan Hasib — Fullstack Developer with a passion for building innovative and high-performance digital products.",
+};
 
 const page = () => {
   return (

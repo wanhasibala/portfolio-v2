@@ -1,6 +1,13 @@
 import React from "react";
 import Contact from "../(home)/Contact";
 import Footer from "../(home)/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with Wan Hasib for engineering roles, technical inquiries, and project collaborations.",
+};
 // import Curve from "@/components/Curve/template";
 
 const page = () => {

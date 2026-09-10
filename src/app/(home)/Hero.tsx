@@ -195,7 +195,7 @@ const Hero = () => {
           >
             PORTFOLIO
           </TextAnimate>
-          <p className="self-end text-right text-2xl sm:text-4xl md:text-5xl lg:text-[64px] font-semibold tracking-tight text-neutral-900 dark:text-white -mt-[2%] sm:-mt-[3%] md:-mt-[4%] select-none">
+          <p className="self-end text-right text-2xl sm:text-4xl md:text-5xl lg:text-[64px] font-semibold tracking-tight text-white -mt-[2%] sm:-mt-[3%] md:-mt-[4%] select-none">
             WAN HASIB
           </p>
         </div>
