@@ -191,7 +191,7 @@ const Hero = () => {
             animate="slideUp"
             delay={3}
             by="character"
-            className="z-10 text-[14.5vw] md:text-[14vw] lg:text-[13.8vw] xl:text-[195px] 2xl:text-[216px] -mt-[16%] sm:-mt-[13%] md:-mt-[11%] lg:-mt-[9%] font-bold tracking-tight text-white mix-blend-difference select-none pointer-events-none leading-[0.85] w-full"
+            className="z-10 text-[14.5vw] md:text-[14vw] lg:text-[13.8vw] xl:text-[195px] 2xl:text-[216px] -mt-[8%] sm:-mt-[8%] md:-mt-[8%] lg:-mt-[9%] font-bold tracking-tight text-white mix-blend-difference select-none pointer-events-none leading-[0.85] w-full"
           >
             PORTFOLIO
           </TextAnimate>
