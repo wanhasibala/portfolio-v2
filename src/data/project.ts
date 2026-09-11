@@ -89,7 +89,7 @@ export const projects: ProjectData[] = [
       "/furtora/furtora6.webp",
       "/furtora/furtora7.webp",
     ],
-    color: "",
+    color: "#E5E5E5",
     href: "https://archisign.webflow.io/",
     overview:
       "Furtora is a premium Webflow template designed for architecture and interior design agencies, featuring a clean, modern aesthetic and fully responsive layouts.",
