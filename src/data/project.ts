@@ -76,6 +76,38 @@ export const projects: ProjectData[] = [
     deploymentLink: "https://nata-id.vercel.app",
   },
   {
+    title: "Furtora",
+    subheading: "Webflow Template Design & Development",
+    slug: "furtora",
+    year: "2026",
+    src: "/furtora/furtora1.webp",
+    src_body: [
+      "/furtora/furtora2.webp",
+      "/furtora/furtora3.webp",
+      "/furtora/furtora4.webp",
+      "/furtora/furtora5.webp",
+      "/furtora/furtora6.webp",
+      "/furtora/furtora7.webp",
+    ],
+    color: "",
+    href: "https://archisign.webflow.io/",
+    overview:
+      "Furtora is a premium Webflow template designed for architecture and interior design agencies, featuring a clean, modern aesthetic and fully responsive layouts.",
+    issue:
+      "Many architecture agencies struggle with outdated websites that do not effectively showcase their portfolio or provide a seamless user experience.",
+    designApproach:
+      "Developed a visually striking template with interactive elements, smooth animations, and a focus on high-quality imagery to enhance user engagement.",
+    material: "Webflow, HTML5, CSS3, JavaScript.",
+    technologies: ["Webflow", "HTML5", "CSS3", "JavaScript"],
+    conclusion:
+      "Furtora provides architecture agencies with a professional online presence, improving client engagement and portfolio presentation.",
+    description:
+      "Furtora is a Webflow template that helps architecture and interior design agencies create a modern and responsive website.",
+    bottleneckHook:
+      "Ensuring cross-browser compatibility and responsive design across various devices. Addressed by thorough testing and optimization of CSS and JavaScript.",
+    deploymentLink: "https://archisign.webflow.io/",
+  },
+  {
     title: "Wareify",
     subheading: "Enterprise Asset Management System",
     slug: "wareify",
