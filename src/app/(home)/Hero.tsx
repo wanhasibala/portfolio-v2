@@ -169,7 +169,7 @@ const Hero = () => {
   const current = verticalContent[vertical];
 
   return (
-    <section className="min-h-screen  w-full flex flex-col items-center justify-center  md:justify-start px-4 sm:px-8 md:px-12 lg:px-20 pt-28 sm:pt-32 md:pt-32 pb-16 bg-neutral-100 dark:bg-transparent text-neutral-900 dark:text-white transition-colors duration-300  ">
+    <section className="min-h-screen  w-full flex flex-col items-center justify-center  md:justify-start px-4 sm:px-8 md:px-12 lg:px-20 pt-28 sm:pt-32 md:pt-32 pb-16 bg-neutral-200 dark:bg-transparent text-neutral-900 dark:text-white transition-colors duration-300  ">
       <motion.div className="w-full max-w-[1400px] flex flex-col relative mx-auto">
         <div className="w-full relative rounded-2xl sm:rounded-3xl md:rounded-[36px] overflow-hidden shadow-sm">
           <Lens lensSize={150} isStatic={false} ariaLabel="Zoom Area">
